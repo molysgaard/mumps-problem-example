@@ -46,7 +46,7 @@
     };
 
     devShells.x86_64-linux.default = pkgs.mkShell {
-      nativeBuildInputs = with pkgs; [ rustc cargo python3 gcc self.packages.x86_64-linux.mumps suitesparse m4 openblas lapack ];
+      nativeBuildInputs = with pkgs; [ rustc cargo self.packages.x86_64-linux.mumps suitesparse m4 openblas lapack ];
     };
   };
 }
