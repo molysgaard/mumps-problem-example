@@ -430,18 +430,7 @@ checksum = "a5996294f19bd3aae0453a862ad728f60e6600695733dd5df01da90c54363a3c"
 
 [[package]]
 name = "russell_chk"
-version = "0.3.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "ddd1c17cf17dda6338c0b5429b624a8aeea9274235a1a86f0457cb05e23979fe"
-dependencies = [
- "num-complex",
-]
-
-[[package]]
-name = "russell_chk"
 version = "0.4.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "7243970e444d372d21c26db23662c1a24e3b64c9d7b558c7bd4c4fbcce8b663b"
 dependencies = [
  "num-complex",
 ]
@@ -449,49 +438,32 @@ dependencies = [
 [[package]]
 name = "russell_lab"
 version = "0.4.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "f8af9605a9f4a741fa1dfa222e1b2d351b6b0686130380ba812427ff5b81dfd5"
 dependencies = [
  "criterion",
  "num-complex",
  "num-traits",
- "russell_chk 0.4.1",
- "russell_openblas 0.4.1",
+ "russell_chk",
+ "russell_openblas",
  "serde",
 ]
 
 [[package]]
 name = "russell_openblas"
-version = "0.3.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "f2a50b1c60188a8dfdd6daa6b89f62c20ab5e2b33a8330c63bb4aef54b31b972"
-dependencies = [
- "criterion",
- "num-complex",
- "russell_chk 0.3.0",
-]
-
-[[package]]
-name = "russell_openblas"
 version = "0.4.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "7b5abc071b6dc0a465bd525b44a983d8c9b973ad1b5fd69db0eeac54de6fd7a8"
 dependencies = [
  "criterion",
  "num-complex",
- "russell_chk 0.4.1",
+ "russell_chk",
 ]
 
 [[package]]
 name = "russell_sparse"
-version = "0.3.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "455cb291d0532c33c78627684d436def6f128f29191c2736eccee3e4c55d216b"
+version = "0.4.1"
 dependencies = [
  "cc",
- "russell_chk 0.3.0",
+ "russell_chk",
  "russell_lab",
- "russell_openblas 0.3.0",
+ "russell_openblas",
  "structopt",
 ]
 

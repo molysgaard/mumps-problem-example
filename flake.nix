@@ -42,7 +42,7 @@
     packages.x86_64-linux.default = naersk'.buildPackage {
       src = ./.;
       gitSubmodules = true;
-      buildInputs = with pkgs; [ self.packages.x86_64-linux.mumps suitesparse ];
+      buildInputs = with pkgs; [ self.packages.x86_64-linux.mumps suitesparse openblas lapack gfortran9 ];
     };
 
     devShells.x86_64-linux.default = pkgs.mkShell {
