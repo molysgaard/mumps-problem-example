@@ -1,0 +1,15 @@
+# This is a comment
+# prefix=/home/kaniini/pkg   # this defines a variable
+# exec_prefix=${prefix}      # defining another variable with a substitution
+# libdir=${exec_prefix}/lib
+# includedir=${prefix}/include
+
+Name: pord        # human-readable name
+Description: pord # human-readable description
+Version: 5.6.0
+URL: http://www.pkgconf.org
+# Requires: mumps_common == 5.6.0, mpiseq == 5.6.0, pord == 5.6.0 
+# Conflicts: libbaz <= 3.0.0
+Libs: -lpord
+# Libs.private: -lm
+# Cflags: -I${includedir}/libfoo
