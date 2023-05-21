@@ -1,5 +1,5 @@
 {
-  nixConfig.bash-prompt-prefix = "\[optimizer\]$ ";
+  nixConfig.bash-prompt-prefix = "\[minimal-mumps-error\]$ ";
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     naersk.url = "github:nix-community/naersk";
@@ -36,17 +36,19 @@
       rustc = toolchain;
     };
 
+    nativeDeps = with pkgs; [ self.packages.x86_64-linux.mumps suitesparse openblas lapack gfortran9 gfortran9.cc ];
+
 
   in {
     packages.x86_64-linux.mumps = pkgs.callPackage ./nix/mumps/mumps.nix {};
     packages.x86_64-linux.default = naersk'.buildPackage {
       src = ./.;
       gitSubmodules = true;
-      buildInputs = with pkgs; [ self.packages.x86_64-linux.mumps suitesparse openblas lapack gfortran9 ];
+      buildInputs = nativeDeps;
     };
 
     devShells.x86_64-linux.default = pkgs.mkShell {
-      nativeBuildInputs = with pkgs; [ rustc cargo self.packages.x86_64-linux.mumps suitesparse m4 openblas lapack ];
+      nativeBuildInputs = nativeDeps;
     };
   };
 }
