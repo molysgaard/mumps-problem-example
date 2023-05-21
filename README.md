@@ -14,4 +14,3 @@ env | grep gfortran
 ```
 
 shows that `NIX_LDFLAGS` contains a directory with the correct gfortran library.
-```
